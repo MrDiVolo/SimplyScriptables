@@ -12,7 +12,7 @@ namespace SimplyTools.Scriptables
         /// <typeparam name="T"></typeparam>
         public class SOSafeList<T> : SOList<T>
         {
-            [SerializeField] private bool m_checkContains = false;
+            [SerializeField] private bool checkContains = false;
 
             public new T this[int index]
             {
@@ -20,7 +20,7 @@ namespace SimplyTools.Scriptables
                 {
                     if (index > -1 && index < Capacity)
                         return base[index];
-                    return default(T);
+                    return default;
                 }
                 set
                 {
@@ -31,13 +31,13 @@ namespace SimplyTools.Scriptables
 
             public new void Add(T _item)
             {
-                if (!m_checkContains || !Contains(_item))
+                if (!checkContains || !Contains(_item))
                     base.Add(_item);
             }
 
             public new void AddRange(IEnumerable<T> collection)
             {
-                if (!m_checkContains)
+                if (!checkContains)
                     base.AddRange(collection);
                 else
                 {

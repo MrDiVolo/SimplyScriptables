@@ -9,42 +9,42 @@ namespace SimplyTools.Scriptables
     /// <typeparam name="T">The <see cref="System.Type"/> used in the <see cref="Queue{T}"/></typeparam>
     public abstract class SOQueue<T> : ScriptableObject
     {
-        [SerializeField] protected Queue<T> m_collection = new Queue<T>();
-        [SerializeField] private bool m_singleQueueInstance;
+        [SerializeField] protected Queue<T> collection = new Queue<T>();
+        [SerializeField] private bool singleQueueInstance = false;
 
         public void Initialise(IEnumerable<T> collection)
-        { m_collection = new Queue<T>(collection); }
+        { this.collection = new Queue<T>(collection); }
 
         public void Initialise(int capacity)
-        { m_collection = new Queue<T>(capacity); }
+        { collection = new Queue<T>(capacity); }
 
-        public int Count { get { return m_collection.Count; } }
+        public int Count { get { return collection.Count; } }
 
-        public void Clear() => m_collection.Clear();
+        public void Clear() => collection.Clear();
 
-        public bool Contains(T item) => m_collection.Contains(item);
+        public bool Contains(T item) => collection.Contains(item);
 
-        public void CopyTo(T[] array, int arrayIndex) => m_collection.CopyTo(array, arrayIndex);
+        public void CopyTo(T[] array, int arrayIndex) => collection.CopyTo(array, arrayIndex);
 
         public T Dequeue()
-        { return m_collection.Dequeue(); }
+        { return collection.Dequeue(); }
 
         public void Enqueue(T item)
         {
-            if (!m_singleQueueInstance || !Contains(item))
-                m_collection.Enqueue(item);
+            if (!singleQueueInstance || !Contains(item))
+                collection.Enqueue(item);
         }
 
         public Queue<T>.Enumerator GetEnumerator()
-        { return m_collection.GetEnumerator(); }
+        { return collection.GetEnumerator(); }
 
         public T Peek()
-        { return m_collection.Peek(); }
+        { return collection.Peek(); }
 
         public T[] ToArray()
-        { return m_collection.ToArray(); }
+        { return collection.ToArray(); }
 
         public void TrimExcess()
-        { m_collection.TrimExcess(); }
+        { collection.TrimExcess(); }
     }
 }

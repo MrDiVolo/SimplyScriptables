@@ -14,11 +14,11 @@ namespace SimplyTools.Scriptables
         /// <summary>
         /// Initialises <see cref="m_scriptable"/> to <see cref="Value"/>
         /// </summary>
-        protected override void OnEnable() => m_scriptable.Value = Value;
+        protected override void OnEnable() => scriptable.Value = Value;
 
         /// <summary>
         /// Sets <see cref="m_scriptable"/>'s value to it's default value
         /// </summary>
-        protected override void OnDisable() => m_scriptable.Value = default;
+        protected override void OnDisable() => scriptable.Value = default;
     }
 }

@@ -14,11 +14,11 @@ namespace SimplyTools.Scriptables
         /// <summary>
         /// Adds <see cref="Value"/> to the collection
         /// </summary>
-        protected override void OnEnable() => m_scriptable?.Add(Value);
+        protected override void OnEnable() => scriptable?.Add(Value);
 
         /// <summary>
         /// Removes <see cref="Value"/> from the collection
         /// </summary>
-        protected override void OnDisable() => m_scriptable?.Remove(Value);
+        protected override void OnDisable() => scriptable?.Remove(Value);
     }
 }

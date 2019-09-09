@@ -10,7 +10,7 @@ namespace SimplyTools.Scriptables
         public TVarType Variable;
         public TScriptableType Scriptable;
 
-        private event Action<TVarType> m_onValueChanged;
+        private event Action<TVarType> onValueChanged;
 
         public event Action<TVarType> OnValueChanged
         {
@@ -22,7 +22,7 @@ namespace SimplyTools.Scriptables
                         Scriptable.OnValueChanged += value;
                 }
                 else
-                    m_onValueChanged += value;
+                    onValueChanged += value;
             }
             remove
             {
@@ -32,7 +32,7 @@ namespace SimplyTools.Scriptables
                         Scriptable.OnValueChanged -= value;
                 }
                 else
-                    m_onValueChanged -= value;
+                    onValueChanged -= value;
             }
         }
 
@@ -55,7 +55,7 @@ namespace SimplyTools.Scriptables
                 else
                 {
                     Variable = value;
-                    m_onValueChanged?.Invoke(Variable);
+                    onValueChanged?.Invoke(Variable);
                 }
             }
         }
