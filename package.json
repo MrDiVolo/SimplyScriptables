@@ -1,0 +1,12 @@
+{
+  "name": "com.simply.scriptables",
+  "displayName": "Simply Scriptables",
+  "description": "ScriptableObjects made easy",
+  "version": "1.0.0",
+  "type": "module",
+  "author": {
+    "name": "Mr Tim",
+    "url": "https://www.timvolossevich.wordpress.com"
+  },
+  "hideInEditor": false
+}
