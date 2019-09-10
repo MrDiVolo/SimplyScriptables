@@ -8,4 +8,4 @@ To add this package to your project;
 4) Open up and Refresh your project
 5) Your packages will be re-resolved and this pacakage will be added to your project
 
-I have also made another package that implements some default variable types and other useful features call <a href="www.google.com"><i>Simply:Scriptables Extras</i></a>.
+I have also made another package that implements some default variable types and other useful features call <a href="https://github.com/MrDiVolo/SimplyScriptablesExtras"><i>Simply:Scriptables Extras</i></a>.
