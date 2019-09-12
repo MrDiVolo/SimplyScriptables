@@ -1,8 +1,8 @@
 {
   "name": "com.simply.scriptables",
-  "displayName": "Simply Scriptables",
+  "displayName": "Simply:Scriptables",
   "description": "ScriptableObjects made easy",
-  "version": "1.0.1-preview",
+  "version": "1.0.2-preview",
   "type": "module",
   "author": {
     "name": "Mr Tim",
