@@ -2,7 +2,7 @@
   "name": "com.simply.scriptables",
   "displayName": "Simply Scriptables",
   "description": "ScriptableObjects made easy",
-  "version": "1.0.0",
+  "version": "1.0.1-preview",
   "type": "module",
   "author": {
     "name": "Mr Tim",
